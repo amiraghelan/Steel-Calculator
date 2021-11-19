@@ -14,13 +14,13 @@ caculateBtn.addEventListener("click", () => {
         name: `${j} FI ${diameters[i]}`,
         area: Number(j * 0.25 * Math.PI * diameters[i] * diameters[i]),
       }
-      cell.delta = Math.abs(cell.area - inputArea)
+      cell.delta = cell.area - inputArea
       console.log(cell.delta)
       table.push(cell)
     }
   }
   table.sort((a, b) => {
-    return a.delta > b.delta ? 1 : -1
+    return Math.abs(a.delta) > Math.abs(b.delta) ? 1 : -1
   })
   answersContainer.innerHTML = ""
   for (let i = 0; i < 5; i++) {
