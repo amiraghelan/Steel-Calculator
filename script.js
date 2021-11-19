@@ -6,7 +6,8 @@ table = []
 let diameters = [6, 8, 10, 12, 14, 16, 18, 22, 25, 28, 30, 32, 34, 36, 38, 40]
 
 caculateBtn.addEventListener("click", () => {
-  const inputArea = Number(areaTextinput.value)
+  table=[]
+    const inputArea = Number(areaTextinput.value)
   for (let i = 0; i < diameters.length; i++) {
     for (let j = 1; j <= 10; j++) {
       let cell = {
